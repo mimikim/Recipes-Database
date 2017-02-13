@@ -1,0 +1,79 @@
+Recipes Database Structure: 10 tables
+------------------------------------
+prefix: rd_
+
+users:
+    ID (bigint 20)
+    user_email (varchar 60)
+    user_pass (varchar 255)
+    display_name (varchar 50)
+
+user_meta:
+    meta_id (primary) (bigint 20)
+    user_id (foreign key for users) (bigint 20)
+    meta_key (varchar 255)
+        - access_level (default is 0 user, 1 admin)
+        - first_name
+        - last_name
+        - favorite (array of favorite recipe IDs)
+        - grocery_list (array of grocery list IDs)
+    meta_value (longtext)
+
+recipes:
+    recipe_id (primary key) (bigint 20)
+    title (text)
+    description (longtext)
+
+recipe_meta:
+    meta_id (primary)
+    recipe id (foreign key for Recipes)
+    meta_key (varchar255)
+        - cook time
+        - nutrition info (array?)
+        - servings
+        - source of recipe
+        - ingredients (array of ingredient IDs)
+    meta_value (longtext)
+
+recipe_directions:
+    direction_id (primary)
+    recipe_id (foreign)
+    direction_number (the direction step number) (tinyint 50)
+    direction_details (details) (longtext)
+
+terms: (tags/categories)
+    term id (primary)
+    name
+    slug
+
+term_meta: (associates recipe with term ids (category/tags) )
+    meta_id (primary)
+    term id (foreign key for term)
+    recipe_id (foreign key for recipes)
+
+term_taxonomy:
+    taxonomy_id (primary) (bigint 20)
+    term_id (foreign key for term id) (bigint 20)
+    taxonomy (varchar 32)
+        - category
+        - tags
+        - difficulty (easy, medium, hard)
+
+ingredients:
+    ingredient id (primary)
+    name
+    slug
+
+ingredient meta: (each row is an ingredient in a recipe)
+    meta id (primary)
+    ingredient id (foreign key for ingredients)
+    recipe_id (foreign key for recipes)
+    meta_key (varchar 255)
+        - quantity
+        - measurement
+        - additional_comment
+    meta_value (longtext)
+
+(quantity and measurement can be null, if null and need to find totals, automatically 1)
+
+

@@ -1,0 +1,47 @@
+Classes:
+------------------------
+
+Utility:
+    - get base url (for external linking...)
+    - redirect
+    - check if query string exists
+    - validate email
+    - validate special characters
+    - validate pattern (private, params: $pattern, $input)
+        - validate alphabetical
+        - validate alphanumeric
+
+Database:
+    - connect to db
+    - run query
+    - bind values
+    - execute query
+    - display results
+
+Sessions:
+    - log in
+    - log off
+    - is user logged in?
+    - check access level (is admin?)
+
+Users: (pass db)
+    - validate email exists in db
+    - validate password
+    - encrypt password
+    - create user
+    - verify user exists
+    - get user meta
+    - set access level
+    -
+
+Recipes: (pass db)
+    - add recipe
+    - update recipe
+    - delete recipe
+    - get recipe
+    - add meta data
+    - update meta data
+
+Query:
+    - search database
+

@@ -1,0 +1,21 @@
+Categories (recipe can be in multiple categories?)
+
+- Breakfast
+- Lunch
+- Dinner
+- Snacks
+- Korean
+
+
+
+Tags:
+- cheap
+- meat
+- vegetarian
+- vegan
+
+
+
+
+Ingredients:
+-

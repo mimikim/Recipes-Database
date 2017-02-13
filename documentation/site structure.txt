@@ -1,0 +1,41 @@
+
+Main Navigation:
+--------------------------------
+* Recipes (clicking will go to Recipes archive)
+    (list of all categories in a dropdown)
+    - Breakfast
+    - Lunch
+    - Dinner
+    - Snacks
+    - Ethnic
+* Log In (goes to log in page, with a link to registration)
+    (if logged in, this link changes to say "Your Account")
+    (if logged in and is admin, show adminbar to access backend)
+* Search (search based on category/tags?)
+
+Footer Navigation:
+--------------------------------
+* About
+* Github
+
+
+
+User Account Functionality:
+--------------------------------
+- save recipes as "Favorites"
+- save recipe to "Grocery List"
+- generate a grocery list of ingredients to purchase based off what is saved in "Grocery List"
+
+
+functionality available to the public:(?)
+--------------------------------
+- download recipe as a PDF file
+    pdflayer.com (api key: 765390c07a0b0d93e0ec1c1b8f2a2eac)
+
+
+
+
+Future Features:
+--------------------------------
+- estimate recipe cost based on ingredient prices?
+- estimate cost based on user's location?
